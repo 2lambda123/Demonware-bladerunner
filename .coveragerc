@@ -7,8 +7,10 @@ exclude_lines =
     def __repr__
     raise AssertionError
     raise NotImplementedError
+    except ImportError
     if __name__ == .__main__.:
     .decode
     .encode
+    pass
 [run]
 source = bladerunner

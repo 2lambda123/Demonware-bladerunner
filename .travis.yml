@@ -14,10 +14,9 @@ before_install:
   - pip install --upgrade tornado
   - pip install --upgrade pytest
   - pip install --upgrade pytest-cov
-  - if [[ $TRAVIS_PYTHON_VERSION == "2.6" ]]; then pip install --upgrade unittest2; fi
-  - if [[ $TRAVIS_PYTHON_VERSION != '3.3' || $TRAVIS_PYTHON_VERSION != '3.2' ]]; then pip install --upgrade futures; fi
+  - if [[ $TRAVIS_PYTHON_VERSION =~ "2." ]]; then pip install --upgrade futures; fi
 
-script: "py.test --cov bladerunner test/unit"
+script: "python setup.py test"
 
 after_success:
   - coveralls
