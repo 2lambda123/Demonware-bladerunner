@@ -1128,7 +1128,7 @@ def test_interactive_hostsfile():
 
     with open(hostsfp, "w") as hostsfile:
         for test_host in test_hosts:
-            hostsfile.write("{}\n".format(test_host))
+            hostsfile.write("{0}\n".format(test_host))
 
     runner = Bladerunner()
     runner.setup_interactive(hostsfp)

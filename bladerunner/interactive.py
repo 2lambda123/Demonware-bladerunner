@@ -226,7 +226,7 @@ class BladerunnerInteractive(object):
         """Mock "logging", prints to stdout if debug is set."""
 
         if self.bladerunner.options["debug"]:
-            print("DEBUG: {}".format(message), file=sys.stdout)
+            print("DEBUG: {0}".format(message), file=sys.stdout)
 
     def __enter__(self):
         """Context management for BladerunnerInteractive objects.

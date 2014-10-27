@@ -880,7 +880,7 @@ class Bladerunner(object):
 
         if print_results:
             for host, result in results.items():
-                print("{}:{}{}".format(
+                print("{0}:{1}{2}".format(
                     host,
                     "\n" if len(result) > 79 else " ",
                     result,
